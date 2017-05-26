@@ -98,13 +98,14 @@ main{
   width: 1150px;
   height: 2210px;
   background-color: #FEF9EB;
-  margin: 600px 60px;
+  margin: 600px 60px 40px 60px;
   box-shadow: 0px 2px 5px 2px #AAAAAA;
+  display: flex;
+
 }
 .blog-row{
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
 }
 .item{
   width: 500px;
@@ -118,37 +119,42 @@ main{
   border-top: 3px solid #B2B2B2;
 }
 
-/*???
 .icon-wrapper{
-  align-content: space-between;
-}*/
-.meta{
+  text-align: center;
 
+}
+
+.fa{
+  border-radius: 50%;
+  background-color: #EFEADE;
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+.meta{
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   padding: 25px;
 
 }
  .date{
-
    text-transform: uppercase;
    border-bottom: 3px solid #B2B2B2;
  }
 
  .category{
-
    text-transform: uppercase;
    border-bottom: 3px solid #B2B2B2;
  }
 .entry-title{
-
-}
-
-.primary-text{
   flex-direction: row;
 }
-
-
-
+.primary-txt{
+  font-size: 16px;
+  text-align: left;
+  font-family: 'Josefin Sans';
+}
 
 /*higher margin for top flex item*/
 .item:nth-of-type(1){
@@ -171,8 +177,6 @@ main{
 
 }
 
-
-
 /*bio*/
 aside{
   position: absolute;
@@ -180,23 +184,25 @@ aside{
   height: 1170px;
   width: 350px;
   margin-left: 755px;
-  margin-bottom: 1015px;
-  text-align: center;
+  margin-top: 30px;
   box-shadow: 0px 2px 5px 5px #E1DDD3;
   line-height: 2;
-  padding: 280px 30px 40px 30px;
-
+  padding: 0px 30px;
+  font-family: 'Josefin Sans';
 }
 
 .aside-heading{
   border-bottom: 3px solid #555555;
-  padding-top: 40px;
   padding-bottom: 40px;
-
+  font-size: 24px;
+  text-align: center;
 }
 #bio{
-  padding-top: 40px;
+  padding-top: 25px;
+  font-size: 18px;
+  text-align: left;
 }
+
 .auth-pic{
   background-image: url('../img/author.jpeg');
   background-size: cover;
@@ -204,6 +210,9 @@ aside{
   height: 200px;
   width: 200px;
   border-radius: 50%;
+  margin: 20px auto;
+  margin-bottom: 40px;
+
 }
 
 footer{
