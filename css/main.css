@@ -100,26 +100,13 @@ main{
   background-color: #FEF9EB;
   margin: 600px 60px;
   box-shadow: 0px 2px 5px 2px #AAAAAA;
-  display: flex;
-  align-items: flex-start;
 }
 .blog-row{
-
-}
-.entry-title{
   display: flex;
   flex-wrap: wrap;
-}
-
-.primary-text{
   flex-direction: row;
 }
-
-
 .item{
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
   width: 500px;
   background-color: #FFFFFF;
   box-shadow: 0px 2px 5px 2px #AAAAAA;
@@ -130,24 +117,39 @@ main{
   padding: 30px 20px;
   border-top: 3px solid #B2B2B2;
 }
+
+/*???
+.icon-wrapper{
+  align-content: space-between;
+}*/
 .meta{
-  display: flex;
-  flex-wrap: wrap;
+
   justify-content: space-between;
   padding: 25px;
-  flex-direction: row;
+
 }
  .date{
-   flex-direction: row;
+
    text-transform: uppercase;
    border-bottom: 3px solid #B2B2B2;
  }
 
  .category{
-   flex-direction: row;
+
    text-transform: uppercase;
    border-bottom: 3px solid #B2B2B2;
  }
+.entry-title{
+
+}
+
+.primary-text{
+  flex-direction: row;
+}
+
+
+
+
 /*higher margin for top flex item*/
 .item:nth-of-type(1){
   margin-top: 75px;
@@ -169,10 +171,7 @@ main{
 
 }
 
-/*???
-.icon-wrapper{
-  align-content: space-between;
-}*/
+
 
 /*bio*/
 aside{
@@ -199,10 +198,12 @@ aside{
   padding-top: 40px;
 }
 .auth-pic{
-
   background-image: url('../img/author.jpeg');
-  background-size: 20px 20px;
+  background-size: cover;
   background-repeat: no-repeat;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
 }
 
 footer{
