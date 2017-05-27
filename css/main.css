@@ -14,7 +14,7 @@
 
 body {
   max-width: 1280px;
-  /*max-height: 2210px;*/
+  position: relative;
   margin: 0;
 }
 
@@ -24,7 +24,6 @@ nav {
   height: 80px;
   top: 0;
   width: 100%;
-
 }
 ul{
   display: flex;
@@ -60,7 +59,6 @@ a {
   margin: 0;
   position: absolute;
   background-image: url('../img/header-img.jpg');
-  /*background-size: 1280px 600px;*/
   width: inherit;
   height: 800px;
   background-size: 1415px 600px;
@@ -87,123 +85,109 @@ a {
   text-shadow: 2px 2px 5px #272500;
   margin: -86px 0px 0px 290px;
 }
-/* FIXME:  */
-/*flex-items--might be helpful?*/
-/*main is parent of blog-row*/
-/* item is parent of item-wrapper (icon)*/
-/*meta is parent of date and category*/
-/*entry-title is parent of primary-text*/
-/*maybe try to set width of flex and force vertical instead of having to assign vertical so the horizontal will work inside boxes*/
+
 main{
   position: absolute;
   z-index: 5;
   width: 1150px;
-  /*height: 1500px;*/
   background-color: #FEF9EB;
   margin: 550px 60px 40px 60px;
-  box-shadow: 0px 2px 5px 2px #AAAAAA;
-  padding-bottom: 25px;
+  box-shadow: 1px 1px 2px 2px #828282;
+  padding-bottom: 48px;
   display: flex;
-
 }
 .blog-row{
-  display: flex;
-  flex-direction: column;
+  display: block;
+  overflow: hidden;
 }
 .item{
   width: 550px;
   background-color: #FFFFFF;
-  box-shadow: 0px 2px 5px 2px #AAAAAA;
+  padding-bottom: 25px;
+  box-shadow: 2px 2px #828282;
   margin-top: 30px;
-  margin-left: 130px;
+  margin-left: 100px;
   line-height: 1.8;
   font-family: 'Noto Serif';
-  justify-content: space-between;
   padding: 30px 7px;
-  border-top: 3px solid #B2B2B2;
+}
+/*higher margin for top flex item*/
+.item:nth-of-type(1){
+  margin-top: 75px;
 }
 
 .icon-wrapper{
+  display: inline-block;
   position: absolute;
   z-index: 4;
-}
-/* FIXME: change back to original bg color when done */
-.fa-flask, .fa-newspaper-o, .fa-plane{
-  border-radius: 50%;
-  /*background-color: #EFEADE;*/
-  background-color: red;
-  padding: 20px;
-  color: #FFFFFF;
-  /*text-align: center;*/
+  text-align: center;
+  margin-top: 15px;
+  width: inherit;
 }
 
+.fa-flask, .fa-newspaper-o, .fa-plane{
+  border-radius: 50%;
+  background-color: #EFEADE;
+  padding: 20px;
+  color: #FFFFFF;
+}
 .meta{
   display: flex;
   flex-direction: row;
-  /*justify-content: flex-end;*/
+  justify-content: space-between;
   padding: 15px 8px;
-   /*box-shadow: 1px 4px 1px #B2B2B2;*/
 }
  .date{
    text-transform: uppercase;
    border-bottom: 3px solid #B2B2B2;
-   /*position: absolute;
-   z-index: 2;*/
-   margin-top: 20px;
+   width: 100%;
+   height: 32px;
+   text-align: center;
    margin-left: 15px;
-   margin-right: 15px;
-   padding-right: 20px;
-   padding-left: 50px;
  }
 
  .category{
    text-transform: uppercase;
    border-bottom: 3px solid #B2B2B2;
-   /*position: absolute;*/
-   margin-top: 20px;
-   margin-right:  15px;
-   padding-right: 20px;
-   padding-left: 20px;
-   /*z-index: 2;*/
+   width: 100%;
+   margin-left: 26px;
+   margin-right: 15px;
+   text-align: center;
  }
 h4.entry-title{
-  flex-direction: row;
+  position: relative;
   font-size: 30px;
   margin-left: 15px;
-  margin-top: -30px;
+  margin-top: -15px;
   font-family: 'Josefin Sans';
   margin-bottom: -6px;
-}
-/*.item*/
- p.primary-txt{
-  display: flex;
-  flex-direction: row;
-  font-size: 22px;
-  text-align: left;
-  font-family: 'Josefin Sans';
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 20px;
-}
-
-/*higher margin for top flex item*/
-.item:nth-of-type(1){
-  margin-top: 75px;
 }
 
 .entry-title {
   font-size: 18px;
   margin-left: 15px;
   padding-top: 50px;
-
 }
+
+.blog-img{
+  float: right;
+}
+
+ p.primary-txt{
+  font-size: 18px;
+  text-align: left;
+  font-family: 'Josefin Sans';
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
 #dino {
   background-image: url('../img/dino.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 270px;
-  width: 270px;
-  float: right;
+  height: 250px;
+  width: 250px;
   margin-right: 15px;
 }
 
@@ -211,9 +195,8 @@ h4.entry-title{
   background-image: url('../img/xx.png');
   background-size: 245px 245px;
   background-repeat: no-repeat;
-  height: 270px;
-  width: 270px;
-  float: right;
+  height: 250px;
+  width: 250px;
   margin-right: 15px;
 }
 
@@ -221,9 +204,8 @@ h4.entry-title{
   background-image: url('../img/yhact.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  height: 270px;
-  width: 270px;
-  float: right;
+  height: 250px;
+  width: 250px;
   margin-right: 15px;
 }
 
@@ -231,10 +213,9 @@ h4.entry-title{
 aside{
   position: absolute;
   background-color: #EFEADE;
-  height: 1310px;
   width: 385px;
   margin-left: 715px;
-  margin-top: 30px;
+  margin-top: 40px;
   box-shadow: 0px 2px 5px 5px #E1DDD3;
   line-height: 1.8;
   padding: 0px 18px;
@@ -250,14 +231,7 @@ aside{
 }
 #bio{
   padding-top: 25px;
-  /*font-size: 20px;*/
   text-align: left;
-}
-p.primary-txt{
-  /*font-size: 20px;*/
-  text-align: left;
-  font-family: 'Josefin Sans';
-  margin-left: 15px;
 }
 
 .auth-pic{
@@ -272,11 +246,11 @@ p.primary-txt{
 }
 
 footer{
+  position: absolute;
   height: 30px;
   width: 100%;
-  position: absolute;
-  margin-top: 2512px;
   background-color: #000000;
   text-align: center;
   color: #FFFFFF;
+  margin-top: 3010px;
 }
