@@ -14,7 +14,7 @@
 
 body {
   max-width: 1280px;
-  max-height: 2210px;
+  /*max-height: 2210px;*/
   margin: 0;
 }
 
@@ -40,50 +40,52 @@ li{
     text-align: center;
 }
 
-#facebook{
+.fa-facebook{
   font-size: 28px;
 }
 
 a {
-
   color: #FFFFFF;
   text-align: center;
   text-decoration: none;
 }
 
 .page-header{
-  position: absolute;
+  position: relative;
   top: 80px;
   width: 100%;
-  height: 600px;
+}
+
+.header-content{
+  margin: 0;
+  position: absolute;
   background-image: url('../img/header-img.jpg');
   /*background-size: 1280px 600px;*/
-  background-size: cover;
-
+  width: inherit;
+  height: 800px;
+  background-size: 1415px 600px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 /*iBeer*/
 .main-heading {
-  position: relative;
-  z-index: 4;
   color: #000000;
   font-family: 'Josefin Sans';
-  font-size: 80px;
-  padding-top: 200px;
-  padding-bottom: 0px;
+  font-size: 146px;
+  padding-top: 100px;
+  padding-bottom: 20px;
   text-align: center;
   margin: 0px auto;
 }
 /*Write thirsty*/
 .sub-heading {
-  position: relative;
+  position: absolute;
   z-index: 5;
   color: #FFFFFF;
   font-family: 'Dancing Script';
-  font-size: 50px;
+  font-size: 76px;
   text-shadow: 2px 2px 5px #272500;
-  text-align: center;
-  margin: 0px;
-  padding: 0px;
+  margin: -86px 0px 0px 290px;
 }
 /* FIXME:  */
 /*flex-items--might be helpful?*/
@@ -93,13 +95,14 @@ a {
 /*entry-title is parent of primary-text*/
 /*maybe try to set width of flex and force vertical instead of having to assign vertical so the horizontal will work inside boxes*/
 main{
-  position: relative;
+  position: absolute;
   z-index: 5;
   width: 1150px;
-  height: 2210px;
+  /*height: 1500px;*/
   background-color: #FEF9EB;
-  margin: 600px 60px 40px 60px;
+  margin: 550px 60px 40px 60px;
   box-shadow: 0px 2px 5px 2px #AAAAAA;
+  padding-bottom: 25px;
   display: flex;
 
 }
@@ -108,99 +111,153 @@ main{
   flex-direction: column;
 }
 .item{
-  width: 500px;
+  width: 550px;
   background-color: #FFFFFF;
   box-shadow: 0px 2px 5px 2px #AAAAAA;
   margin-top: 30px;
   margin-left: 130px;
-  line-height: 2;
+  line-height: 1.8;
   font-family: 'Noto Serif';
-  padding: 30px 20px;
+  justify-content: space-between;
+  padding: 30px 7px;
   border-top: 3px solid #B2B2B2;
 }
 
 .icon-wrapper{
-  text-align: center;
-
+  position: absolute;
+  z-index: 4;
 }
-
-.fa{
+/* FIXME: change back to original bg color when done */
+.fa-flask, .fa-newspaper-o, .fa-plane{
   border-radius: 50%;
-  background-color: #EFEADE;
+  /*background-color: #EFEADE;*/
+  background-color: red;
   padding: 20px;
   color: #FFFFFF;
+  /*text-align: center;*/
 }
 
 .meta{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  padding: 25px;
-
+  /*justify-content: flex-end;*/
+  padding: 15px 8px;
+   /*box-shadow: 1px 4px 1px #B2B2B2;*/
 }
  .date{
    text-transform: uppercase;
    border-bottom: 3px solid #B2B2B2;
+   /*position: absolute;
+   z-index: 2;*/
+   margin-top: 20px;
+   margin-left: 15px;
+   margin-right: 15px;
+   padding-right: 20px;
+   padding-left: 50px;
  }
 
  .category{
    text-transform: uppercase;
    border-bottom: 3px solid #B2B2B2;
+   /*position: absolute;*/
+   margin-top: 20px;
+   margin-right:  15px;
+   padding-right: 20px;
+   padding-left: 20px;
+   /*z-index: 2;*/
  }
-.entry-title{
+h4.entry-title{
   flex-direction: row;
+  font-size: 30px;
+  margin-left: 15px;
+  margin-top: -30px;
+  font-family: 'Josefin Sans';
+  margin-bottom: -6px;
 }
-.primary-txt{
-  font-size: 16px;
+/*.item*/
+ p.primary-txt{
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
   text-align: left;
   font-family: 'Josefin Sans';
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
 }
 
 /*higher margin for top flex item*/
 .item:nth-of-type(1){
   margin-top: 75px;
-  background-image: url('../img/dino.jpg');
-  background-size: 245px 245px;
-  background-repeat: no-repeat;
 }
 
-.item:nth-of-type(2){
+.entry-title {
+  font-size: 18px;
+  margin-left: 15px;
+  padding-top: 50px;
+
+}
+#dino {
+  background-image: url('../img/dino.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 270px;
+  width: 270px;
+  float: right;
+  margin-right: 15px;
+}
+
+#xx{
   background-image: url('../img/xx.png');
   background-size: 245px 245px;
   background-repeat: no-repeat;
+  height: 270px;
+  width: 270px;
+  float: right;
+  margin-right: 15px;
 }
 
-.item:nth-of-type(4){
+#yhact-img{
   background-image: url('../img/yhact.jpg');
-  background-size: 245px 245px;
+  background-size: cover;
   background-repeat: no-repeat;
-
+  height: 270px;
+  width: 270px;
+  float: right;
+  margin-right: 15px;
 }
 
 /*bio*/
 aside{
   position: absolute;
   background-color: #EFEADE;
-  height: 1170px;
-  width: 350px;
-  margin-left: 755px;
+  height: 1310px;
+  width: 385px;
+  margin-left: 715px;
   margin-top: 30px;
   box-shadow: 0px 2px 5px 5px #E1DDD3;
-  line-height: 2;
-  padding: 0px 30px;
+  line-height: 1.8;
+  padding: 0px 18px;
   font-family: 'Josefin Sans';
+  font-size: 22px;
 }
 
 .aside-heading{
   border-bottom: 3px solid #555555;
-  padding-bottom: 40px;
+  padding-bottom: 28px;
   font-size: 24px;
   text-align: center;
 }
 #bio{
   padding-top: 25px;
-  font-size: 18px;
+  /*font-size: 20px;*/
   text-align: left;
+}
+p.primary-txt{
+  /*font-size: 20px;*/
+  text-align: left;
+  font-family: 'Josefin Sans';
+  margin-left: 15px;
 }
 
 .auth-pic{
@@ -212,11 +269,13 @@ aside{
   border-radius: 50%;
   margin: 20px auto;
   margin-bottom: 40px;
-
 }
 
 footer{
   height: 30px;
+  width: 100%;
+  position: absolute;
+  margin-top: 2512px;
   background-color: #000000;
   text-align: center;
   color: #FFFFFF;
